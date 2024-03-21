@@ -1,0 +1,61 @@
+{
+  "name": "linaria",
+  "description": "Blazing fast zero-runtime CSS in JS library",
+  "version": "4.0.0",
+  "bugs": "https://github.com/callstack/linaria/issues",
+  "dependencies": {
+    "@linaria/babel-preset": "workspace:^",
+    "@linaria/core": "workspace:^",
+    "@linaria/extractor": "workspace:^",
+    "@linaria/react": "workspace:^",
+    "@linaria/rollup": "workspace:^",
+    "@linaria/server": "workspace:^",
+    "@linaria/shaker": "workspace:^",
+    "@linaria/stylelint": "workspace:^",
+    "@linaria/webpack4-loader": "workspace:^"
+  },
+  "engines": {
+    "node": "^12.16.0 || >=13.7.0"
+  },
+  "files": [
+    "babel",
+    "evaluators",
+    "loader",
+    "react",
+    "rollup",
+    "server",
+    "stylelint-config",
+    "types/",
+    "lib/",
+    "esm/"
+  ],
+  "homepage": "https://github.com/callstack/linaria#readme",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "css",
+    "css-in-js",
+    "linaria",
+    "react",
+    "styled-components"
+  ],
+  "license": "MIT",
+  "linaria": {
+    "tags": {
+      "css": "@linaria/core/processors/css",
+      "styled": "@linaria/react/processors/styled"
+    }
+  },
+  "main": "lib/core.js",
+  "module": "esm/core.js",
+  "repository": "git@github.com:callstack/linaria.git",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:esm && npm run build:declarations",
+    "build:declarations": "tsc --emitDeclarationOnly --outDir types",
+    "build:esm": "babel src --out-dir esm --extensions '.js,.jsx,.ts,.tsx' --source-maps --delete-dir-on-start",
+    "build:lib": "cross-env NODE_ENV=legacy babel src --out-dir lib --extensions '.js,.jsx,.ts,.tsx' --source-maps --delete-dir-on-start",
+    "typecheck": "tsc --noEmit --composite false",
+    "watch": "npm run build --watch"
+  },
+  "types": "types/core.d.ts"
+}

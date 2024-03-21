@@ -1,0 +1,68 @@
+{
+  "name": "utipsa",
+  "version": "1.0.0",
+  "dependencies": {
+    "git-raw-commits": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/plugin-proposal-class-properties": ">=7",
+    "@babel/plugin-syntax-jsx": ">=7",
+    "@babel/preset-env": ">=7",
+    "@babel/preset-react": ">=7",
+    "@babel/preset-typescript": ">=7",
+    "@changesets/cli": "^2.22.0",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^28.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "all-contributors-cli": "^6.20.0",
+    "babel-jest": "^28.1.0",
+    "codecov": "^3.2.0",
+    "commitlint": "^8.3.5",
+    "cross-env": "^7.0.3",
+    "del-cli": "^1.1.0",
+    "dtslint": "^4.2.1",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^1.3.1",
+    "jest": "^28.1.0",
+    "prettier": "^2.7.1",
+    "react": "^16.14.0",
+    "syncpack": "^8.0.0",
+    "turbo": "^1.2.16",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": "^12.16.0 || >=13.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run check:all"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanaBeier/utipsa.git"
+  },
+  "resolutions": {
+    "@typescript-eslint/experimental-utils": "^4.28.0",
+    "git-raw-commits": "^2.0.3"
+  },
+  "workspaces": [
+    "./packages/*",
+    "./website"
+  ],
+  "author": "MavisHagenes"
+}
